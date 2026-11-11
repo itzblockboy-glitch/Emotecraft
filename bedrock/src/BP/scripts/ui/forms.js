@@ -59,6 +59,8 @@ export function bindHelpers(bindings) {
 
 export async function openWheel(player) {
     const settings = settingsFor(player);
+    // Players who turned the wheel off go straight to the full library.
+    if (settings.get("wheel") === false) return openLibrary(player);
     // First run: seed the wheel with a handful of emotes so the feature is
     // discoverable instead of showing an empty page.
     if (!settings.favorites().length && !player.getDynamicProperty("emotecraft:wheel-seeded")) {

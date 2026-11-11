@@ -88,6 +88,14 @@ export class Settings {
     }
 }
 
+/**
+ * The wheel toggle lives in the same config store; when it is off the Emote
+ * Wheel item and `/emote` fall back to the library instead of the wheel.
+ */
+export function wheelEnabled(player) {
+    return settingsFor(player).get("wheel") !== false;
+}
+
 /** Explains the defaults in the config UI. */
 export const SETTING_LABELS = {
     enabled: "Emotes enabled",

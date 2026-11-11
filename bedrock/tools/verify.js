@@ -587,6 +587,31 @@ export const MessageFormData = globalThis.__mock.modules["@minecraft/server-ui"]
     );
     player.isSneaking = false;
 
+    // --- config screen ------------------------------------------------------------
+    runtime.setFormResponse({ canceled: false, formValues: [true, true, true, true, 80, 5] });
+    const configResult = emoteCommand?.callback({ sourceEntity: player, sourceType: 0 }, "config");
+    runtime.system.flush();
+    await new Promise(resolve => setTimeout(resolve, 30));
+    check(configResult?.status === 0, "`/emote config` opens without error");
+    check(
+        runtime.calls.forms.some(f => /options/i.test(f.title || "")),
+        "config form is shown",
+    );
+    check(player.getDynamicProperty("emotecraft:cfg:volume") === 0.8, "config persists volume");
+    check(player.getDynamicProperty("emotecraft:cfg:cooldown") === 0.25, "config persists cooldown");
+
+    // --- disabled emotes are refused ------------------------------------------------
+    player.setDynamicProperty("emotecraft:cfg:enabled", false);
+    runtime.calls.playAnimation.length = 0;
+    clockOffset += 60_000;
+    emoteCommand?.callback({ sourceEntity: player, sourceType: 0 }, "clap");
+    runtime.system.flush();
+    check(
+        !runtime.calls.playAnimation.some(c => c.name === "animation.emotecraft.clap"),
+        "disabled emotes do not play",
+    );
+    player.setDynamicProperty("emotecraft:cfg:enabled", true);
+
     // --- scriptevent bridge -------------------------------------------------------
     // The emote cooldown is wall-clock based; step past it as the game would.
     clockOffset = 60_000;

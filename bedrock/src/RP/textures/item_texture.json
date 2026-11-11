@@ -1,0 +1,9 @@
+{
+  "resource_pack_name": "emotecraft",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "emote_wheel": {
+      "textures": "textures/items/emote_wheel"
+    }
+  }
+}

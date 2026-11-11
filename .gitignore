@@ -1,0 +1,10 @@
+# Build outputs
+bedrock/build/
+bedrock/node_modules/
+bedrock/.venv/
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db

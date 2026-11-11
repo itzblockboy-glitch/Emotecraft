@@ -1,0 +1,38 @@
+{
+  "format_version": "1.14.0",
+  "sound_definitions": {
+    "emotecraft.caramell_dance": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/emotecraft/caramell_dance",
+          "stream": true,
+          "volume": 1,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "emotecraft.lets_groove": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/emotecraft/lets_groove",
+          "stream": true,
+          "volume": 1,
+          "load_on_low_memory": true
+        }
+      ]
+    },
+    "emotecraft.take_the_l": {
+      "category": "player",
+      "sounds": [
+        {
+          "name": "sounds/emotecraft/take_the_l",
+          "stream": true,
+          "volume": 1,
+          "load_on_low_memory": true
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "pack.name",
+    "description": "pack.description",
+    "uuid": "e3e7a40a-b865-41d7-8a4d-c4368b31bb89",
+    "version": [
+      1,
+      0,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      21,
+      90
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "13c1e2fc-5621-46f2-844c-7ddfde3993ab",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "fe57d3e5-98ee-4005-8fb2-e87bee521d77",
+      "version": [
+        1,
+        0,
+        0
+      ],
+      "entry": "scripts/index.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "uuid": "aa7d4166-82cd-48db-8ad4-8ac4f2740312",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ],
+  "metadata": {
+    "authors": [
+      "Emotecraft port for Bedrock"
+    ],
+    "license": "GPL-3.0",
+    "product_type": "addon"
+  }
+}

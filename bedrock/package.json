@@ -1,0 +1,17 @@
+{
+  "name": "emotecraft-bedrock",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Emotecraft for Minecraft Bedrock Edition - port of the Emotecraft Java mod",
+  "type": "commonjs",
+  "scripts": {
+    "convert": "node tools/convert.js",
+    "build": "node tools/build.js",
+    "build:fast": "node tools/build.js --no-convert",
+    "bundle": "node tools/build.js --no-convert",
+    "verify": "node tools/verify.js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "emotecraft:emote_wheel"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      " P ",
+      "PBP",
+      " P "
+    ],
+    "key": {
+      "P": {
+        "item": "minecraft:paper"
+      },
+      "B": {
+        "item": "minecraft:book"
+      }
+    },
+    "result": {
+      "item": "emotecraft:emote_wheel",
+      "count": 1
+    }
+  }
+}
